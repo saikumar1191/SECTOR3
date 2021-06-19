@@ -1,0 +1,11 @@
+import time
+from selenium import webdriver
+driver = webdriver.Chrome (executable_path="C:\\chromedriver.exe")
+driver.get("https://mail.rediff.com/cgi-bin/login.cgi")
+# identify username, password and signin elements
+driver.find_element_by_name("login").send_keys("tutorialspoint")
+time.sleep(0.2)
+driver.find_element_by_name("passwd").send_keys("pass123")
+time.sleep(0.4)
+driver.find_element_by_class_name("signinbtn").click()
+driver.close

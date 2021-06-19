@@ -1,0 +1,7 @@
+define service {
+ use                    generic-service
+ host_name              SRV1
+ service_description    PING
+ contact_groups         router-admins
+ check_command          check_ping!100.0,20%!500.0,60%
+}
